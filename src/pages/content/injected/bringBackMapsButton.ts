@@ -14,7 +14,7 @@ async function bringBackMapsButton() {
     return;
   }
 
-  const editableChild = list?.children[list.children.length - 2];
+  const editableChild = list?.children[list.children.length > 3 ? list.children.length - 3 : 0] as HTMLElement;
 
   let mapsChild: HTMLElement;
   for (const child of list.children) {
